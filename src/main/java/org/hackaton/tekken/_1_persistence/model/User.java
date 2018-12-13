@@ -13,8 +13,6 @@ public class User extends AbstractModel {
 
     private String username;
 
-    private String password;
-
     /**
      *
      * @return the user username
@@ -33,29 +31,11 @@ public class User extends AbstractModel {
         this.username = username;
     }
 
-    /**
-     *
-     * @return the user password
-     */
-
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     *
-     * @param password the password to set
-     */
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     @Override
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 }

@@ -9,6 +9,7 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
+ *A generic jpa data access object to be used as a base for concrete jpa service implementations
  *
  * @param <T> the model type
  * @see Dao
