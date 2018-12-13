@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService{
 
-    public UserDAO userDAO;
+    private UserDAO userDAO;
 
 
     /**

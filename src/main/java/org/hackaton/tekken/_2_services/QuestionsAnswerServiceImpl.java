@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class QuestionsAnswerServiceImpl implements QuestionsAnswersService {
 
 
-    public QuestionDAO questionDAO;
+    private QuestionDAO questionDAO;
 
     /**
      *

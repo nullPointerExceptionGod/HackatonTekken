@@ -16,6 +16,8 @@ public class Question extends AbstractModel {
 
     private String description;
     private Difficulty difficulty;
+    private boolean alreadyUsed;
+
 
     @OneToMany(
             // propagate changes on question entity to answer entity
@@ -65,11 +67,40 @@ public class Question extends AbstractModel {
 
     /**
      *
-     * @param difficulty
+     * @param difficulty the difficulty to set
      */
 
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
+    }
+
+    /**
+     *
+     * @return status of question
+     */
+
+
+    public boolean isAlreadyUsed() {
+        return alreadyUsed;
+    }
+
+    /**
+     *
+     * @param alreadyUsed The status of question if was already used or not
+     */
+
+    public void setAlreadyUsed(boolean alreadyUsed) {
+        this.alreadyUsed = alreadyUsed;
+    }
+
+    /**
+     *
+     * @return list of answers
+     */
+
+
+    public List<Answer> getAnswers() {
+        return answers;
     }
 
     @Override
