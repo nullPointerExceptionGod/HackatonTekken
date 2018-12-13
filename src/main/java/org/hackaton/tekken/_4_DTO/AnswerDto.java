@@ -1,4 +1,4 @@
-package org.hackaton.tekken.DTO;
+package org.hackaton.tekken._4_DTO;
 
 /**
  * The {@link org.hackaton.tekken._1_persistence.model.Answer} data transfer object

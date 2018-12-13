@@ -1,4 +1,4 @@
-package org.hackaton.tekken.DTO;
+package org.hackaton.tekken._4_DTO;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -20,7 +20,7 @@ public class UserDto {
 
     /**
      *
-     * @return the user DTO id
+     * @return the user _4_DTO id
      */
 
 

@@ -1,8 +1,6 @@
-package org.hackaton.tekken.DTO;
+package org.hackaton.tekken._4_DTO;
 
 import org.hackaton.tekken._1_persistence.model.Difficulty;
-
-import javax.validation.constraints.NotNull;
 
 /**
  * The {@link org.hackaton.tekken._1_persistence.model.Question} data transfer object
