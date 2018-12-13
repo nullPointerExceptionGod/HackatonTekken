@@ -1,10 +1,14 @@
 package org.hackaton.tekken._1_persistence.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * User model entity
  */
 
-
+@Entity
+@Table(name = "user")
 public class User extends AbstractModel {
 
     private String username;

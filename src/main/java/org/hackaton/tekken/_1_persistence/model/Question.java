@@ -36,7 +36,7 @@ public class Question extends AbstractModel {
 
     /**
      *
-     * @return description the description of question
+     * @return the description of question
      */
 
     public String getDescription() {
@@ -55,7 +55,7 @@ public class Question extends AbstractModel {
 
     /**
      *
-     * @return difficulty the difficulty of question
+     * @return the difficulty of question
      */
 
 
