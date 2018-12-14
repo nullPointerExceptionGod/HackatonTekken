@@ -10,9 +10,17 @@ public class AnswerDto {
 
     private Integer id;
 
-    private boolean isRight;
 
+    private String validation;
     private String description;
+
+    public String getValidation() {
+        return validation;
+    }
+
+    public void setValidation(String validation) {
+        this.validation = validation;
+    }
 
     /**
      *
@@ -33,23 +41,8 @@ public class AnswerDto {
         this.id = id;
     }
 
-    /**
-     *
-     * @return the state of answer, if is right or not
-     */
 
-    public boolean isRight() {
-        return isRight;
-    }
 
-    /**
-     *
-     * @param right the state to set
-     */
-
-    public void setRight(boolean right) {
-        isRight = right;
-    }
 
     /**
      *
@@ -73,7 +66,7 @@ public class AnswerDto {
     public String toString() {
         return "AnswerDto{" +
                 "id=" + id +
-                ", isRight=" + isRight +
+                ", validation='" + validation + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

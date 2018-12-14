@@ -23,7 +23,7 @@ public class AnswerToAnswerDto extends AbstractConverter<Answer, AnswerDto> {
         AnswerDto answerDto = new AnswerDto();
         answerDto.setId(answer.getId());
         answerDto.setDescription(answer.getDescription());
-        answerDto.setRight(answer.isRight());
+        answerDto.setValidation(answer.getValidation());
 
         return answerDto;
     }

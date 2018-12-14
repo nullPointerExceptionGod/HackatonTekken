@@ -13,30 +13,19 @@ import javax.persistence.Table;
 public class Answer extends AbstractModel {
 
 
-   private boolean isRight;
+   private String validation;
    private String description;
 
    @ManyToOne
    private Question question;
 
 
-    /**
-     *
-     * @return isRight verifies if answer is right
-     */
-
-    public boolean isRight() {
-        return isRight;
+    public String getValidation() {
+        return validation;
     }
 
-    /**
-     *
-     * @param right
-     */
-
-
-    public void setRight(boolean right) {
-        isRight = right;
+    public void setValidation(String validation) {
+        this.validation = validation;
     }
 
     /**
@@ -68,8 +57,9 @@ public class Answer extends AbstractModel {
     @Override
     public String toString() {
         return "Answer{" +
-                "isRight=" + isRight +
+                "validation='" + validation + '\'' +
                 ", description='" + description + '\'' +
+                ", question=" + question +
                 '}';
     }
 }

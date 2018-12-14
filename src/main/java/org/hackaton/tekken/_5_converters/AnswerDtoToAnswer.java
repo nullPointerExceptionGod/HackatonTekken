@@ -23,7 +23,7 @@ public class AnswerDtoToAnswer implements Converter<AnswerDto, Answer> {
         Answer answer = (answerDto.getId() != null ? questionsAnswersService.getAnswer(answerDto.getId()) : new Answer());
 
         answer.setDescription(answerDto.getDescription());
-        answer.setRight(answerDto.isRight());
+        answer.setValidation(answerDto.getValidation());
 
         return answer;
 

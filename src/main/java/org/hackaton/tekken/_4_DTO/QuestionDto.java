@@ -16,7 +16,8 @@ public class QuestionDto {
 
     private Difficulty difficulty;
 
-    private boolean alreadyUsed;
+
+
 
 
     /**
@@ -60,18 +61,7 @@ public class QuestionDto {
      * @return the state from question, if was already used or not
      */
 
-    public boolean isAlreadyUsed() {
-        return alreadyUsed;
-    }
 
-    /**
-     *
-     * @param alreadyUsed the state of question to set
-     */
-
-    public void setAlreadyUsed(boolean alreadyUsed) {
-        this.alreadyUsed = alreadyUsed;
-    }
 
     public String getDescription() {
         return description;
@@ -85,8 +75,8 @@ public class QuestionDto {
     public String toString() {
         return "QuestionDto{" +
                 "id=" + id +
+                ", description='" + description + '\'' +
                 ", difficulty=" + difficulty +
-                ", alreadyUsed=" + alreadyUsed +
                 '}';
     }
 }
