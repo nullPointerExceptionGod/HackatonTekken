@@ -5,6 +5,12 @@ import org.springframework.core.convert.converter.Converter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Generic converter to be used as a base for concrete implementations
+ * @param <S> the source type
+ * @param <T> the target type
+ */
+
 public abstract class AbstractConverter<S, T> implements Converter<S,T> {
 
     /**

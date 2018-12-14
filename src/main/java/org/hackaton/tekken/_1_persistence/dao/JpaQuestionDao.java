@@ -4,13 +4,13 @@ import org.hackaton.tekken._1_persistence.model.Question;
 import org.springframework.stereotype.Repository;
 
 /**
- * A JPA {@link QuestionDAO} implementation
+ * A JPA {@link QuestionDao} implementation
  */
 
 @Repository
-public class JpaQuestionDAO extends JpaGenericDAO<Question> implements QuestionDAO {
+public class JpaQuestionDao extends JpaGenericDao<Question> implements QuestionDao {
 
-    public JpaQuestionDAO() {
+    public JpaQuestionDao() {
         super(Question.class);
     }
 }

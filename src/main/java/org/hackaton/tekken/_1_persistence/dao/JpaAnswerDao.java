@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public class JpaAnswerDAO extends JpaGenericDAO<Answer> implements AnswerDao {
+public class JpaAnswerDao extends JpaGenericDao<Answer> implements AnswerDao {
 
-    public JpaAnswerDAO() {
+    public JpaAnswerDao() {
         super(Answer.class);
     }
 }

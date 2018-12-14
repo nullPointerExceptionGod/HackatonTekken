@@ -1,6 +1,8 @@
 package org.hackaton.tekken._2_services;
 
-import org.hackaton.tekken._1_persistence.dao.QuestionDAO;
+import org.hackaton.tekken._1_persistence.dao.AnswerDao;
+import org.hackaton.tekken._1_persistence.dao.QuestionDao;
+import org.hackaton.tekken._1_persistence.model.Answer;
 import org.hackaton.tekken._1_persistence.model.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +15,8 @@ import org.springframework.stereotype.Service;
 public class QuestionsAnswerServiceImpl implements QuestionsAnswersService {
 
 
-    private QuestionDAO questionDAO;
+    private QuestionDao questionDAO;
+    private AnswerDao answerDao;
 
     /**
      *
@@ -21,18 +24,29 @@ public class QuestionsAnswerServiceImpl implements QuestionsAnswersService {
      */
 
     @Autowired
-    public void setQuestionDAO(QuestionDAO questionDAO) {
+    public void setQuestionDAO(QuestionDao questionDAO) {
         this.questionDAO = questionDAO;
+    }
+
+
+    @Autowired
+    public void setAnswerDao(AnswerDao answerDao) {
+        this.answerDao = answerDao;
     }
 
     /**
      *
-     * @see QuestionsAnswersService#get(Integer)
+     * @see QuestionsAnswersService#getQuestion(Integer)
      */
 
     @Override
-    public Question get(Integer id) {
+    public Question getQuestion(Integer id) {
         return questionDAO.findById(id);
+    }
+
+    @Override
+    public Answer getAnswer(Integer id) {
+        return answerDao.findById(id);
     }
 
 

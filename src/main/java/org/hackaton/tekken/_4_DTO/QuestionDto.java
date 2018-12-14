@@ -12,6 +12,8 @@ public class QuestionDto {
 
     private Integer id;
 
+    private String description;
+
     private Difficulty difficulty;
 
     private boolean alreadyUsed;
@@ -69,6 +71,14 @@ public class QuestionDto {
 
     public void setAlreadyUsed(boolean alreadyUsed) {
         this.alreadyUsed = alreadyUsed;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override

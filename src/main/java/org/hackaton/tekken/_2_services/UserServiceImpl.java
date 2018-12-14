@@ -1,9 +1,10 @@
 package org.hackaton.tekken._2_services;
 
-import org.hackaton.tekken._1_persistence.dao.UserDAO;
+import org.hackaton.tekken._1_persistence.dao.UserDao;
 import org.hackaton.tekken._1_persistence.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * An {@link UserService} implementation
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService{
 
-    private UserDAO userDAO;
+    private UserDao userDAO;
 
 
     /**
@@ -22,7 +23,7 @@ public class UserServiceImpl implements UserService{
      */
 
     @Autowired
-    public void setUserDAO(UserDAO userDAO) {
+    public void setUserDAO(UserDao userDAO) {
         this.userDAO = userDAO;
     }
 
@@ -42,6 +43,7 @@ public class UserServiceImpl implements UserService{
      * @see UserService#save(User)
      */
 
+    @Transactional
     @Override
     public User save(User user) {
         return userDAO.saveOrUpdate(user);

@@ -4,13 +4,13 @@ import org.hackaton.tekken._1_persistence.model.User;
 import org.springframework.stereotype.Repository;
 
 /**
- * A JPA {@link UserDAO} implementation
+ * A JPA {@link UserDao} implementation
  */
 
 @Repository
-public class JpaUserDAO extends JpaGenericDAO<User> implements UserDAO {
+public class JpaUserDao extends JpaGenericDao<User> implements UserDao {
 
-    public JpaUserDAO() {
+    public JpaUserDao() {
         super(User.class);
     }
 }

@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 
-public abstract class JpaGenericDAO<T extends Model> implements Dao<T> {
+public abstract class JpaGenericDao<T extends Model> implements Dao<T> {
 
     protected Class<T> modelType;
 
@@ -29,7 +29,7 @@ public abstract class JpaGenericDAO<T extends Model> implements Dao<T> {
      *
      * @param modelType the model type
      */
-    public JpaGenericDAO(Class<T> modelType) {
+    public JpaGenericDao(Class<T> modelType) {
         this.modelType = modelType;
     }
 

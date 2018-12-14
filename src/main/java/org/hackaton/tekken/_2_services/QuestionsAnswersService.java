@@ -1,5 +1,6 @@
 package org.hackaton.tekken._2_services;
 
+import org.hackaton.tekken._1_persistence.model.Answer;
 import org.hackaton.tekken._1_persistence.model.Question;
 
 /**
@@ -14,7 +15,12 @@ public interface QuestionsAnswersService {
      * @return the question
      */
 
-    Question get(Integer id);
+    Question getQuestion(Integer id);
+
+    Answer getAnswer(Integer id);
+
+
+
 
 
 }
