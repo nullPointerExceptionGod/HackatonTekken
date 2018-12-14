@@ -19,7 +19,19 @@ public interface QuestionsAnswersService {
 
     Question getQuestion(Integer id);
 
+    /**
+     *
+     * @param id the answer id
+     * @return the answer
+     */
+
+
     Answer getAnswer(Integer id);
+
+    /**
+     *
+     * @return the questions list
+     */
 
     List<Question> listQuestions();
 

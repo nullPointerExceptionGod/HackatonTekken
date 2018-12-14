@@ -24,9 +24,7 @@ public interface UserService {
      * @return the saved user
      */
 
-
     User save(User user);
-
 
     /**
      * Gets a list of the users
@@ -34,6 +32,5 @@ public interface UserService {
      * @return the users list
      */
     List<User> list();
-
 
 }

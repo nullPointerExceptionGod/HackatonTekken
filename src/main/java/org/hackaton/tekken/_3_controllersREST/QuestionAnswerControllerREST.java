@@ -15,10 +15,7 @@ import org.hackaton.tekken._5_converters.QuestionToQuestionDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +24,7 @@ import java.util.List;
  * A Rest controller responsible for {@link Question,Answer} responsible for CRUD operations
  */
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("api/user")
 public class QuestionAnswerControllerREST {
@@ -100,6 +98,13 @@ public class QuestionAnswerControllerREST {
         return new ResponseEntity<>(answerDtos, HttpStatus.OK);
 
     }
+
+    /**
+     * Retrieves a representation of the given Questions
+     *
+     * @param cid the user id
+     * @return list of questions
+     */
 
     @RequestMapping(method = RequestMethod.GET, path = "/{cid}/question")
     public ResponseEntity<List<QuestionDto>> listQuestions(@PathVariable Integer cid) {

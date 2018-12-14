@@ -24,6 +24,7 @@ import java.util.List;
  * Rest controller responsible for {@link User} to deal with CRUD operations
  */
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/user")
 public class UserControllerREST {

@@ -14,9 +14,19 @@ public class AnswerDto {
     private String validation;
     private String description;
 
+    /**
+     *
+     * @return answer validation
+     */
+
     public String getValidation() {
         return validation;
     }
+
+    /**
+     *
+     * @param validation
+     */
 
     public void setValidation(String validation) {
         this.validation = validation;
@@ -26,7 +36,6 @@ public class AnswerDto {
      *
      * @return id the answer id
      */
-
 
     public Integer getId() {
         return id;
@@ -40,9 +49,6 @@ public class AnswerDto {
     public void setId(Integer id) {
         this.id = id;
     }
-
-
-
 
     /**
      *

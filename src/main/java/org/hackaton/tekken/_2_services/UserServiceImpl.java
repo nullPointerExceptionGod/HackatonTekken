@@ -12,12 +12,10 @@ import java.util.List;
  * An {@link UserService} implementation
  */
 
-
 @Service
 public class UserServiceImpl implements UserService{
 
     private UserDao userDAO;
-
 
     /**
      *
@@ -28,7 +26,6 @@ public class UserServiceImpl implements UserService{
     public void setUserDAO(UserDao userDAO) {
         this.userDAO = userDAO;
     }
-
 
     /**
      *
@@ -51,11 +48,14 @@ public class UserServiceImpl implements UserService{
         return userDAO.saveOrUpdate(user);
     }
 
+    /**
+     *
+     * @see UserService#list()
+     */
+
     @Override
     public List<User> list() {
 
         return userDAO.findAll();
     }
-
-
 }

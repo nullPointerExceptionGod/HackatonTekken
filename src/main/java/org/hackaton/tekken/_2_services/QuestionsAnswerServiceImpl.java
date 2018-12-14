@@ -30,6 +30,11 @@ public class QuestionsAnswerServiceImpl implements QuestionsAnswersService {
         this.questionDAO = questionDAO;
     }
 
+    /**
+     *
+     * @param answerDao the answer DAO to set
+     */
+
 
     @Autowired
     public void setAnswerDao(AnswerDao answerDao) {
@@ -46,10 +51,21 @@ public class QuestionsAnswerServiceImpl implements QuestionsAnswersService {
         return questionDAO.findById(id);
     }
 
+    /**
+     *
+     *
+     * @see QuestionsAnswersService#getAnswer(Integer)
+     */
+
     @Override
     public Answer getAnswer(Integer id) {
         return answerDao.findById(id);
     }
+
+    /**
+     *
+     * @see QuestionsAnswersService#listQuestions()
+     */
 
     @Override
     public List<Question> listQuestions() {
