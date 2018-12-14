@@ -2,10 +2,10 @@ package org.hackaton.tekken._5_converters;
 
 import org.hackaton.tekken._1_persistence.model.User;
 import org.hackaton.tekken._4_DTO.UserDto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserToUserDto extends AbstractConverter<User, UserDto> {
-
-
 
     /**
      * Converts the user model object into a user DTO

@@ -17,6 +17,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 
+/**
+ *
+ * Rest controller responsible for {@link User} to deal with CRUD operations
+ */
+
 @RestController
 @RequestMapping("/api/user")
 public class UserControllerREST {

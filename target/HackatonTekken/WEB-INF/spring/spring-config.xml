@@ -7,7 +7,7 @@
     <bean class="org.hackaton.tekken.SpringBootstrap"/>
 
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-        <property name="locations" value="classpath:javabank.properties"/>
+        <property name="locations" value="classpath:hackatonTekken.properties"/>
     </bean>
 
     <!-- Use spring servlet for all requests, including static resources -->
@@ -24,6 +24,5 @@
     </mvc:interceptors>
 
     <import resource="persistence.xml"/>
-    <import resource="presentation.xml"/>
 
 </beans>

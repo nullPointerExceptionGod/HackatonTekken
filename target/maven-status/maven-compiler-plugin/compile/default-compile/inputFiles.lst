@@ -8,6 +8,7 @@
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/interceptor/LogRequestsInterceptor.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_5_converters/AnswerDtoToAnswer.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_5_converters/UserToUserDto.java
+/Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/EasyQuestion.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/Answer.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/dao/Dao.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_5_converters/AnswerToAnswerDto.java
@@ -19,6 +20,7 @@
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_3_controllersREST/QuestionAnswerControllerREST.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/Question.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_5_converters/AbstractConverter.java
+/Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/factories/QuestionFactory.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/Difficulty.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_5_converters/QuestionDtoToQuestion.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/dao/JpaAnswerDao.java
@@ -29,4 +31,6 @@
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/AbstractModel.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_5_converters/UserDtoToUser.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/dao/JpaUserDao.java
+/Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/HardQuestion.java
 /Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_2_services/QuestionsAnswerServiceImpl.java
+/Users/codecadet/workspace/hackatonTekken/HackatonTekken/src/main/java/org/hackaton/tekken/_1_persistence/model/MediumQuestion.java

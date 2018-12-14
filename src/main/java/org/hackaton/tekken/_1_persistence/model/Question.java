@@ -11,12 +11,12 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "question")
-public class Question extends AbstractModel {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "difficulty")
+public abstract class Question extends AbstractModel {
 
     private String description;
     private Difficulty difficulty;
-    private boolean alreadyUsed;
 
 
     @OneToMany(
@@ -61,9 +61,7 @@ public class Question extends AbstractModel {
      */
 
 
-    public Difficulty getDifficulty() {
-        return difficulty;
-    }
+    public abstract Difficulty getDifficulty();
 
     /**
      *
@@ -74,24 +72,6 @@ public class Question extends AbstractModel {
         this.difficulty = difficulty;
     }
 
-    /**
-     *
-     * @return status of question
-     */
-
-
-    public boolean isAlreadyUsed() {
-        return alreadyUsed;
-    }
-
-    /**
-     *
-     * @param alreadyUsed The status of question if was already used or not
-     */
-
-    public void setAlreadyUsed(boolean alreadyUsed) {
-        this.alreadyUsed = alreadyUsed;
-    }
 
     /**
      *

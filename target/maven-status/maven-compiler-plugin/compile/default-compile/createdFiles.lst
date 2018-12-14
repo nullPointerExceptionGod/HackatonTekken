@@ -1,4 +1,7 @@
+org/hackaton/tekken/_1_persistence/model/HardQuestion.class
 org/hackaton/tekken/_3_controllersREST/UserControllerREST.class
+org/hackaton/tekken/factories/QuestionFactory$1.class
+org/hackaton/tekken/_1_persistence/model/EasyQuestion.class
 org/hackaton/tekken/_1_persistence/model/Model.class
 org/hackaton/tekken/_5_converters/QuestionToQuestionDto.class
 org/hackaton/tekken/_1_persistence/model/Question.class
@@ -19,9 +22,11 @@ org/hackaton/tekken/_2_services/QuestionsAnswerServiceImpl.class
 org/hackaton/tekken/_5_converters/QuestionDtoToQuestion.class
 org/hackaton/tekken/_2_services/UserServiceImpl.class
 org/hackaton/tekken/_1_persistence/dao/JpaAnswerDao.class
+org/hackaton/tekken/_1_persistence/model/MediumQuestion.class
 org/hackaton/tekken/_5_converters/UserToUserDto.class
 org/hackaton/tekken/_1_persistence/dao/JpaGenericDao.class
 org/hackaton/tekken/_1_persistence/model/Difficulty.class
+org/hackaton/tekken/factories/QuestionFactory.class
 org/hackaton/tekken/_1_persistence/model/User.class
 org/hackaton/tekken/_1_persistence/model/Answer.class
 org/hackaton/tekken/_5_converters/AnswerToAnswerDto.class

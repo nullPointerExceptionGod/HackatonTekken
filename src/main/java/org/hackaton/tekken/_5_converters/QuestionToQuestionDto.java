@@ -24,7 +24,6 @@ public class QuestionToQuestionDto extends AbstractConverter<Question, QuestionD
 
         QuestionDto questionDto = new QuestionDto();
         questionDto.setId(question.getId());
-        questionDto.setAlreadyUsed(question.isAlreadyUsed());
         questionDto.setDifficulty(question.getDifficulty());
 
         return questionDto;

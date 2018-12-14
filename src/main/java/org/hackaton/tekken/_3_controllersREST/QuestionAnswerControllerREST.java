@@ -20,6 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A Rest controller responsible for {@link Question,Answer} responsible for CRUD operations
+ */
+
 @RestController
 @RequestMapping("api/user")
 public class QuestionAnswerControllerREST {
