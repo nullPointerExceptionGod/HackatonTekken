@@ -12,12 +12,11 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "difficulty")
+@DiscriminatorColumn(name = "difficulty",discriminatorType = DiscriminatorType.STRING)
+@Table(name = "question")
 public abstract class Question extends AbstractModel {
 
     private String description;
-    private Difficulty difficulty;
-
 
     @OneToMany(
             // propagate changes on question entity to answer entity
@@ -68,10 +67,6 @@ public abstract class Question extends AbstractModel {
      * @param difficulty the difficulty to set
      */
 
-    public void setDifficulty(Difficulty difficulty) {
-        this.difficulty = difficulty;
-    }
-
 
     /**
      *
@@ -87,7 +82,7 @@ public abstract class Question extends AbstractModel {
     public String toString() {
         return "Question{" +
                 "description='" + description + '\'' +
-                ", difficulty=" + difficulty +
+                ", answers=" + answers +
                 '}';
     }
 }

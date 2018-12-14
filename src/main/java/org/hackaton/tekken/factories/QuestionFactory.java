@@ -26,9 +26,9 @@ public class QuestionFactory {
             case MEDIUM:
                 newQuestion = new MediumQuestion();
                 break;
-            case HARD:
+            /*case HARD:
                 newQuestion = new HardQuestion();
-                break;
+                break;*/
             default:
                 throw new IllegalArgumentException();
         }
