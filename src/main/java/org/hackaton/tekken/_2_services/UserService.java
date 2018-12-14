@@ -2,6 +2,8 @@ package org.hackaton.tekken._2_services;
 
 import org.hackaton.tekken._1_persistence.model.User;
 
+import java.util.List;
+
 /**
  * common interface for user services, provides methods to manage users
  */
@@ -24,6 +26,14 @@ public interface UserService {
 
 
     User save(User user);
+
+
+    /**
+     * Gets a list of the users
+     *
+     * @return the users list
+     */
+    List<User> list();
 
 
 }

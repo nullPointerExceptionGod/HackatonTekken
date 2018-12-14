@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * An {@link UserService} implementation
  */
@@ -47,6 +49,12 @@ public class UserServiceImpl implements UserService{
     @Override
     public User save(User user) {
         return userDAO.saveOrUpdate(user);
+    }
+
+    @Override
+    public List<User> list() {
+
+        return userDAO.findAll();
     }
 
 

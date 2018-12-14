@@ -24,6 +24,7 @@ public class QuestionToQuestionDto extends AbstractConverter<Question, QuestionD
 
         QuestionDto questionDto = new QuestionDto();
         questionDto.setId(question.getId());
+        questionDto.setDescription(question.getDescription());
         questionDto.setDifficulty(question.getDifficulty());
 
         return questionDto;

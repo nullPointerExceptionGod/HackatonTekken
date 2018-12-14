@@ -3,8 +3,11 @@ package org.hackaton.tekken._3_controllersREST;
 
 import org.hackaton.tekken._1_persistence.model.Answer;
 import org.hackaton.tekken._1_persistence.model.Question;
+import org.hackaton.tekken._1_persistence.model.User;
 import org.hackaton.tekken._2_services.QuestionsAnswersService;
+import org.hackaton.tekken._2_services.UserService;
 import org.hackaton.tekken._4_DTO.AnswerDto;
+import org.hackaton.tekken._4_DTO.QuestionDto;
 import org.hackaton.tekken._5_converters.AnswerDtoToAnswer;
 import org.hackaton.tekken._5_converters.AnswerToAnswerDto;
 import org.hackaton.tekken._5_converters.QuestionDtoToQuestion;
@@ -29,6 +32,7 @@ import java.util.List;
 public class QuestionAnswerControllerREST {
 
     private QuestionsAnswersService questionsAnswersService;
+    private UserService userService;
 
     private QuestionDtoToQuestion questionDtoToQuestion;
     private QuestionToQuestionDto questionToQuestionDto;
@@ -60,16 +64,29 @@ public class QuestionAnswerControllerREST {
         this.answerDtoToAnswer = answerDtoToAnswer;
     }
 
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
     /**
      * Retrieves a representation of the given Question answers
      *
-     * @param cid the question id
+     * @param uid the user id
+     * @param qid the question id
      * @return the response entity
      */
-    @RequestMapping(method = RequestMethod.GET, path = "/{cid}/question")
-    public ResponseEntity<List<AnswerDto>> listQuestionAnswers(@PathVariable Integer cid) {
+    @RequestMapping(method = RequestMethod.GET, path = "/{uid}/question/{qid}")
+    public ResponseEntity<List<AnswerDto>> listAnswersByQuestion(@PathVariable Integer uid, @PathVariable Integer qid) {
 
-        Question question = questionsAnswersService.getQuestion(cid);
+        User user = userService.get(uid);
+
+
+        if (user == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        Question question = questionsAnswersService.getQuestion(qid);
 
         if (question == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -81,5 +98,24 @@ public class QuestionAnswerControllerREST {
         }
 
         return new ResponseEntity<>(answerDtos, HttpStatus.OK);
+
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/{cid}/question")
+    public ResponseEntity<List<QuestionDto>> listQuestions(@PathVariable Integer cid) {
+
+        User user = userService.get(cid);
+
+        if (user == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        List<QuestionDto> questionDtos = new ArrayList<>();
+
+        for (Question question : questionsAnswersService.listQuestions()) {
+            questionDtos.add(questionToQuestionDto.convert(question));
+        }
+
+        return new ResponseEntity<>(questionDtos, HttpStatus.OK);
     }
 }

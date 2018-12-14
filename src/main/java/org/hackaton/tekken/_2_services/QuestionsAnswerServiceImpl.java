@@ -7,6 +7,8 @@ import org.hackaton.tekken._1_persistence.model.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * An {@link QuestionsAnswersService} implementation
  */
@@ -47,6 +49,11 @@ public class QuestionsAnswerServiceImpl implements QuestionsAnswersService {
     @Override
     public Answer getAnswer(Integer id) {
         return answerDao.findById(id);
+    }
+
+    @Override
+    public List<Question> listQuestions() {
+        return questionDAO.findAll();
     }
 
 

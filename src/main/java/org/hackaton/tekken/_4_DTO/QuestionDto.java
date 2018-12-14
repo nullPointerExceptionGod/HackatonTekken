@@ -16,10 +16,6 @@ public class QuestionDto {
 
     private Difficulty difficulty;
 
-
-
-
-
     /**
      *
      * @return the question id

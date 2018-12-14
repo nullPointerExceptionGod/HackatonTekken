@@ -16,6 +16,8 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -88,5 +90,22 @@ public class UserControllerREST {
         }
 
         return new ResponseEntity<>(userToUserDto.convert(user), HttpStatus.OK);
+    }
+
+    /**
+     * Retrieves a representation of the list of customers
+     *
+     * @return the response entity
+     */
+    @RequestMapping(method = RequestMethod.GET, path = {"/", ""})
+    public ResponseEntity<List<UserDto>> listUsers() {
+
+        List<UserDto> userDtos = new ArrayList<>();
+
+        for (User user  : userService.list()) {
+            userDtos.add(userToUserDto.convert(user));
+        }
+
+        return new ResponseEntity<>(userDtos, HttpStatus.OK);
     }
 }
